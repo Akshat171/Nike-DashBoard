@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Rubik:wght@400;500;700&display=swap');
+:root{
+  --red:#d01c28;
+  --gray: #2e2e2e;
+}
+*{
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body{
+  font-family: 'Poppins', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+
+button{
+  all: unset;
+  padding: 6px 16px;
+  background: var(--red);
+  color: white;
+  height: 32px;
+  font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+
+
+  height: 72px;
+  align-items: center;
+}
+
+nav ul{
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+
+.hero{
+  display: flex;
+align-items: center;
+height:cal(100vh-72px) ;
+padding-top: 100px;
+}
+
+.hero-contain{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 36px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.hero h1{
+  font-weight: 800;
+  font-size: 108px;
+  line-height: 102px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hero p{
+  font-weight: 600;
+  color: var(--gray);
+  max-width: 400px;
+}
+
+.hero-button{
+  display: flex;
+  gap: 40px;
+
+}
+
+.hero-button button{
+  font-size: 24px;
+}
+
+.secondary-btn{
+   background:transparent;
+   color:var(--gray);
+   border: 1px solid gray;
+}
+
+.shopping p{
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.brand-icons{
+  display: flex;
+  gap: 16px;
+
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding-top: 50px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .hero h1 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  
+  .hero p {
+    max-width: 100%;
   }
 }
